@@ -10,7 +10,7 @@ var url = document.location + '';
 var getridof;
 if (url.match(/http:\/\/www\.thestar\.com\/.*/)) {
     getridof = function star_getridof(ford) {
-        var rofobox = $("div.star-box div.star-box-heading h2:contains('" + ford + "')");
+        var rofobox = $("div.star-box > div.star-box-heading > h2:contains('" + ford + "')");
         rofobox.parent().parent().remove();
         var headlines = $("p.headline a:contains('" + ford + "')");
         headlines.remove();
